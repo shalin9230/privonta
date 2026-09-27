@@ -28,8 +28,9 @@ echo "Bootstrapping privonta development environment at $ROOT"
 node --version
 python3 --version
 
-# Add package-manager install steps here when the project defines them
-# (e.g. npm ci, pip install -r requirements.txt, cargo fetch).
+if [[ -f "$ROOT/package.json" ]]; then
+  npm ci
+fi
 
 echo "$STAMP" > "$MARKER"
 echo "Install complete."

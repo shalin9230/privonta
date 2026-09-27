@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privonta — Local demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell" id="app">
+      <section class="card" id="login-panel">
+        <h1>Privonta</h1>
+        <p class="muted">Local role demo — not connected to production.</p>
+        <form id="login-form">
+          <label>
+            Email
+            <input type="email" name="email" required autocomplete="username" />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" required autocomplete="current-password" />
+          </label>
+          <button type="submit">Sign in</button>
+          <p class="error" id="login-error" hidden></p>
+        </form>
+        <details class="demo-hint">
+          <summary>Demo accounts (local)</summary>
+          <ul id="demo-user-list"></ul>
+        </details>
+      </section>
+
+      <section class="card" id="dashboard" hidden>
+        <header class="dash-header">
+          <div>
+            <h1 id="welcome-name">Welcome</h1>
+            <p class="muted" id="welcome-role"></p>
+          </div>
+          <button type="button" id="logout-btn" class="secondary">Sign out</button>
+        </header>
+        <div class="role-panel" id="role-panel"></div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
