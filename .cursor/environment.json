@@ -1,0 +1,18 @@
+{
+  "name": "privonta",
+  "user": "ubuntu",
+  "install": "bash .cursor/install.sh",
+  "terminals": [
+    {
+      "name": "privonta-demo",
+      "command": "npm start",
+      "description": "Local Privonta demo at http://127.0.0.1:3000 (localhost on your machine when run locally)"
+    }
+  ],
+  "ports": [
+    {
+      "name": "privonta-web",
+      "port": 3000
+    }
+  ]
+}
